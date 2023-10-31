@@ -1,15 +1,22 @@
 import * as React from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import {
+  type THEOlivePlayer,
+  THEOlivePlayerView,
+} from '@theolive/react-native-player';
 
 export default function App() {
-
-  React.useEffect(() => {
-  }, []);
+  React.useEffect(() => {}, []);
 
   return (
     <View style={styles.container}>
-      <Text>Result: {3}</Text>
+      <THEOlivePlayerView
+        onPlayerReady={(player: THEOlivePlayer) => {
+          // Load your channelId:
+          void player.loadChannel('my-channel-id');
+        }}
+      />
     </View>
   );
 }
