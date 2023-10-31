@@ -3229,6 +3229,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@theolive/player@npm:^3.7.2":
+  version: 3.9.0
+  resolution: "@theolive/player@npm:3.9.0"
+  checksum: ed5ddc8883379140b6ecf0766cf0abb61aedee2cb7c12db7a20f664a5334640e2e241280d7b246afffa5d221dcaba0f63cb79ae638e2ebc9439278f4dfbd61f2
+  languageName: node
+  linkType: hard
+
+"@theolive/react-native-player@npm:0.1.0":
+  version: 0.1.0
+  resolution: "@theolive/react-native-player@npm:0.1.0"
+  dependencies:
+    "@theolive/player": ^3.7.2
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: 5e24c1cecf4b1d6efe8e899dad5e5720bce5c7ece3e06a069d0c96fd1aa5e5e32e4e253eeb640778ca9eea1b67cf2ff61479c761ca2d626cf057b0e516e14966
+  languageName: node
+  linkType: hard
+
 "@tsconfig/node10@npm:^1.0.7":
   version: 1.0.9
   resolution: "@tsconfig/node10@npm:1.0.9"
@@ -11680,6 +11699,7 @@ __metadata:
     "@babel/preset-env": ^7.20.0
     "@babel/runtime": ^7.20.0
     "@react-native/metro-config": ^0.72.11
+    "@theolive/react-native-player": 0.1.0
     babel-plugin-module-resolver: ^5.0.0
     metro-react-native-babel-preset: 0.76.8
     pod-install: ^0.1.0

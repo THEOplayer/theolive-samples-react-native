@@ -101,6 +101,10 @@ android {
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
     }
+    repositories {
+      maven { url "https://maven.theoplayer.com/releases" }
+      maven { url "https://jitpack.io" }
+    }
 }
 
 dependencies {
