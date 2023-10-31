@@ -2,25 +2,48 @@
 
 Samples for the THEOlive React Native SDK.
 
-## Installation
+## How to run the sample app
 
-```sh
-npm install react-native-theolive-samples
+### Step 1: Prerequisites
+
+Check out this repository and make sure
+your [React Native environment setup](https://reactnative.dev/docs/environment-setup) is complete.
+
+### Step 2: Build
+
+Use yarn to build:
+
+```shell
+yarn
 ```
 
-## Usage
+### Step 3: Run
 
-```js
-import { multiply } from 'react-native-theolive-samples';
-
-// ...
-
-const result = await multiply(3, 7);
+```shell
+yarn example run
 ```
 
-## Contributing
+## Customize
 
-See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
+The sample app uses the `THEOlivePlayerView` component to play a THEOlive channel.
+It has a `onPlayerReady` callback to signal when the player API is available.
+
+Make sure to replace `my-channel-id` with your actual channel ID:
+
+```tsx
+<THEOlivePlayerView
+  onPlayerReady={(player: THEOlivePlayer) => {
+    // Load your channelId:
+    void player.loadChannel('my-channel-id');
+  }}
+/>
+```
+
+## Limitations
+
+Currently, the THEOlive React Native SDK is only available for Android.
+
+iOS is in development and will be included in the next release of the player.
 
 ## License
 
