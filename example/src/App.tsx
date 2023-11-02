@@ -16,7 +16,7 @@ export default function App() {
       <THEOlivePlayerView
         onPlayerReady={(player: THEOlivePlayer) => {
           // Load your channelId:
-          void player.loadChannel('my-channel-id');
+          player.loadChannel('my-channel-id');
           // Add optional event listeners:
           player.addEventListener(
             'channelloaded',

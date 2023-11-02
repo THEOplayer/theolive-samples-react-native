@@ -34,7 +34,7 @@ Make sure to replace `my-channel-id` with your actual channel ID:
 <THEOlivePlayerView
   onPlayerReady={(player: THEOlivePlayer) => {
     // Load your channelId:
-    void player.loadChannel('my-channel-id');
+    player.loadChannel('my-channel-id');
   }}
 />
 ```

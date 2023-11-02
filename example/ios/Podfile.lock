@@ -375,7 +375,7 @@ PODS:
   - React-jsinspector (0.72.6)
   - React-logger (0.72.6):
     - glog
-  - react-native-theolive-player (0.1.0):
+  - react-native-theolive-player (0.2.0):
     - RCT-Folly (= 2021.07.22.00)
     - React-Core
   - react-native-theolive-samples (0.1.0):
@@ -699,7 +699,7 @@ SPEC CHECKSUMS:
   React-jsiexecutor: 3bf18ff7cb03cd8dfdce08fbbc0d15058c1d71ae
   React-jsinspector: 194e32c6aab382d88713ad3dd0025c5f5c4ee072
   React-logger: cebf22b6cf43434e471dc561e5911b40ac01d289
-  react-native-theolive-player: 64eb1daa743d6cad628a878e5e975e013891c1ef
+  react-native-theolive-player: 61dd795ce563513419c02e3cf1a28d1da03f1a3e
   react-native-theolive-samples: 37282ff32d61e82aaaf3dac606655da1222a479c
   React-NativeModulesApple: 02e35e9a51e10c6422f04f5e4076a7c02243fff2
   React-perflogger: e3596db7e753f51766bceadc061936ef1472edc3
