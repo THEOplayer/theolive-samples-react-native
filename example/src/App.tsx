@@ -1,42 +1,40 @@
 import * as React from 'react';
+import { useState } from 'react';
 
 import { StyleSheet, View } from 'react-native';
-import {
-  type ChannelLoadedEvent,
-  type ErrorEvent,
-  type THEOlivePlayer,
-  THEOlivePlayerView,
-} from '@theolive/react-native-player';
+import { BasicPlayback } from './examples/BasicPlayback';
+import { ExampleSelector } from './examples/ExampleSelector';
+
+const CHANNEL_ID = 'put-your-channel-id-here';
 
 export default function App() {
-  React.useEffect(() => {}, []);
-
+  const [selectedExample, setSelectedExample] = useState<string | undefined>(
+    undefined
+  );
   return (
     <View style={styles.container}>
-      <THEOlivePlayerView
-        onPlayerReady={(player: THEOlivePlayer) => {
-          // Load your channelId:
-          player.loadChannel('my-channel-id');
-          // Add optional event listeners:
-          player.addEventListener(
-            'channelloaded',
-            (event: ChannelLoadedEvent) => {
-              console.log(`Channel ${event.channelId} has been loaded`);
-            }
-          );
-          player.addEventListener('error', (event: ErrorEvent) => {
-            console.log(`Error: ${event.error.message}`);
-          });
-        }}
+      <ExampleSelector
+        channelId={CHANNEL_ID}
+        setSelectedExample={setSelectedExample}
       />
+      {selectedExample === 'basic' && <BasicPlayback channelId={CHANNEL_ID} />}
     </View>
   );
 }
 
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
+    gap: 10,
+    paddingTop: 30,
+  },
+  text: {
+    color: 'black',
+  },
+  buttonRow: {
+    flexDirection: 'row',
+    gap: 10,
   },
 });
