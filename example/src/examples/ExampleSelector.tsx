@@ -20,6 +20,12 @@ export const ExampleSelector = (props: {
             setSelectedExample('basic');
           }}
         />
+        <Button
+          title={'UI & fullscreen'}
+          onPress={() => {
+            setSelectedExample('fullscreen');
+          }}
+        />
       </View>
     </>
   );

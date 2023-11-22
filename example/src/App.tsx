@@ -4,20 +4,32 @@ import { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { BasicPlayback } from './examples/BasicPlayback';
 import { ExampleSelector } from './examples/ExampleSelector';
+import { FullscreenPlayback } from './examples/FullscreenPlayback';
 
 const CHANNEL_ID = 'put-your-channel-id-here';
 
 export default function App() {
+  const [fullscreen, setFullscreen] = useState(false);
   const [selectedExample, setSelectedExample] = useState<string | undefined>(
     undefined
   );
   return (
     <View style={styles.container}>
-      <ExampleSelector
-        channelId={CHANNEL_ID}
-        setSelectedExample={setSelectedExample}
-      />
+      {/* Make sure to hide unrelated components when the player goes fullscreen.*/}
+      {!fullscreen && (
+        <ExampleSelector
+          channelId={CHANNEL_ID}
+          setSelectedExample={setSelectedExample}
+        />
+      )}
       {selectedExample === 'basic' && <BasicPlayback channelId={CHANNEL_ID} />}
+      {selectedExample === 'fullscreen' && (
+        <FullscreenPlayback
+          channelId={CHANNEL_ID}
+          fullscreen={fullscreen}
+          setFullscreen={setFullscreen}
+        />
+      )}
     </View>
   );
 }
