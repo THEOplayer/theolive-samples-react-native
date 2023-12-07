@@ -81,6 +81,7 @@ const uiStyles = StyleSheet.create({
     justifyContent: 'flex-end',
   },
   button: {
+    backgroundColor: 'lightblue',
     width: 120,
   },
 });

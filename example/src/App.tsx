@@ -48,4 +48,7 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     gap: 10,
   },
+  button: {
+    backgroundColor: 'lightblue',
+  },
 });

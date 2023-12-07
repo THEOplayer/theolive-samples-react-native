@@ -15,18 +15,22 @@ export const ExampleSelector = (props: {
         Select one of the examples to get started:
       </Text>
       <View style={styles.buttonRow}>
-        <Button
-          title={'Basic playback'}
-          onPress={() => {
-            setSelectedExample('basic');
-          }}
-        />
-        <Button
-          title={'UI & fullscreen'}
-          onPress={() => {
-            setSelectedExample('fullscreen');
-          }}
-        />
+        <View style={styles.button}>
+          <Button
+            title={'Basic playback'}
+            onPress={() => {
+              setSelectedExample('basic');
+            }}
+          />
+        </View>
+        <View style={styles.button}>
+          <Button
+            title={'UI & fullscreen'}
+            onPress={() => {
+              setSelectedExample('fullscreen');
+            }}
+          />
+        </View>
       </View>
     </>
   );
