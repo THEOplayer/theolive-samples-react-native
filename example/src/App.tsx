@@ -14,7 +14,7 @@ export default function App() {
     undefined
   );
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       {/* Make sure to hide unrelated components when the player goes fullscreen.*/}
       {!fullscreen && (
         <ExampleSelector
@@ -30,7 +30,7 @@ export default function App() {
           setFullscreen={setFullscreen}
         />
       )}
-    </View>
+    </SafeAreaView>
   );
 }
 
@@ -40,7 +40,6 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start',
     gap: 10,
-    paddingTop: 30,
   },
   text: {
     color: 'black',
