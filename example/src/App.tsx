@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useState } from 'react';
 
-import { StyleSheet, View } from 'react-native';
+import { SafeAreaView, StyleSheet } from 'react-native';
 import { BasicPlayback } from './examples/BasicPlayback';
 import { ExampleSelector } from './examples/ExampleSelector';
 import { FullscreenPlayback } from './examples/FullscreenPlayback';

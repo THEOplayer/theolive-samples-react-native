@@ -39,12 +39,6 @@ Make sure to replace `my-channel-id` with your actual channel ID:
 />
 ```
 
-## Limitations
-
-Currently, the THEOlive React Native SDK is only available for Android.
-
-iOS is in development and will be included in the next release of the player.
-
 ## License
 
 MIT
