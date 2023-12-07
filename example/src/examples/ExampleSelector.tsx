@@ -9,7 +9,8 @@ export const ExampleSelector = (props: {
   const { channelId, setSelectedExample } = props;
   return (
     <>
-      <Text style={styles.text}>Currently selected ChannelId: {channelId}</Text>
+      <Text style={styles.text}>Currently selected ChannelId:</Text>
+      <Text style={styles.text}>{channelId}</Text>
       <Text style={styles.text}>
         Select one of the examples to get started:
       </Text>
