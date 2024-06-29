@@ -18,7 +18,7 @@ const CopyWebpackPluginConfig = new CopyWebpackPlugin({
       from: path.resolve(
         appDirectory,
         './node_modules/@theolive/player/THEOLive.sw.js'
-      ), // Adjust the path accordingly
+      ),
       to: path.resolve(appDirectory, outputLocation, 'THEOLive.sw.js'),
     },
   ],
