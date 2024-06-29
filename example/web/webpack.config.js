@@ -1,5 +1,6 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const appDirectory = path.resolve(__dirname, '..');
 
@@ -10,6 +11,18 @@ const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
 });
 
 const outputLocation = 'dist';
+
+const CopyWebpackPluginConfig = new CopyWebpackPlugin({
+  patterns: [
+    {
+      from: path.resolve(
+        appDirectory,
+        './node_modules/@theolive/player/THEOLive.sw.js'
+      ),
+      to: path.resolve(appDirectory, outputLocation, 'THEOLive.sw.js'),
+    },
+  ],
+});
 
 const babelLoaderConfiguration = {
   test: /\.tsx?$/,
@@ -47,7 +60,7 @@ module.exports = {
       'react': path.resolve(appDirectory, '../node_modules/react'),
     },
   },
-  plugins: [HTMLWebpackPluginConfig],
+  plugins: [HTMLWebpackPluginConfig, CopyWebpackPluginConfig],
   devServer: {
     // Tells dev-server to open the browser after server had been started.
     open: true,

@@ -4,6 +4,20 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <title>THEOlive React Native SDK example.</title>
+  <script>
+    if (!window.ManagedMediaSource && navigator.serviceWorker) {
+    // if (navigator.serviceWorker) {
+        navigator.serviceWorker.register("THEOLive.sw.js")
+        .then((registration) => {
+          console.log('Service Worker registered with scope:', registration.scope);
+        })
+        .catch((error) => {
+          console.log('Service Worker registration failed:', JSON.stringify(error));
+        });
+    } else {
+      console.log('No service worker registered');
+    }
+  </script>
 </head>
 
 <body>

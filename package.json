@@ -157,5 +157,8 @@
         }
       ]
     ]
+  },
+  "dependencies": {
+    "copy-webpack-plugin": "^12.0.2"
   }
 }
